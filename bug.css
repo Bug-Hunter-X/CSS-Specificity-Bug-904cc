@@ -1,0 +1,10 @@
+The CSS code has a specificity issue.  The more specific selector is overriding the less specific one, resulting in unexpected styling. For example:
+
+```css
+div p { color: blue; }
+.special p { color: red; }
+<div class="special">
+  <p>This text will be red.</p>
+</div>
+```
+The `.special p` selector is more specific because it uses a class selector which takes precedence over the `div p` selector resulting in the text being red instead of blue.
