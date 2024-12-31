@@ -1,0 +1,8 @@
+To solve the specificity issue, ensure your more general styles are applied after the more specific styles or use !important (though this is generally discouraged as it can make your CSS difficult to maintain).  Here's a possible solution using more general selectors to correct the issue, applying styles after the more specific one or the `!important` flag for demonstration:
+
+```css
+.special p { color: red; }
+div p { color: blue; }
+/*Alternative solution using !important (generally discouraged)*/
+div p { color: blue !important; }
+```
